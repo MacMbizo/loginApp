@@ -2,13 +2,27 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
-# import mysql.connector as connector
+import mysql.connector as con
 
 
 class LoginApp(QDialog):
     def __init__(self):
         super(LoginApp, self).__init__()
         loadUi("login-form.ui", self)
+        self.b1.clicked.connect(self.login)
+        self.b2.clicked.connect(self.show_reg)
+
+    def login(self):
+        un = self.tb1.text()
+        pw = self.tb2.text()
+        db = con.connect(host="localhost", user="root", password="", db="sampleqt")
+        cursor = db.cursor()
+        cursor.execute("select * from userlist where username = '"+ un +"' and password = '"+ pw +"'")
+        result = cursor.fetchone()
+        if result:
+            QMessageBox.information(self, "Login Output", "Congrats!! You logged in successfully!!")
+        else:
+            QMessageBox.information(self, "Login Output", "Invalid User...Register for new user")
 
 
 class RegApp(QDialog):
