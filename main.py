@@ -16,3 +16,16 @@ class RegApp(QDialog):
         super(RegApp, self).__init__()
         loadUi("register-form.ui", self)
 
+
+app = QApplication(sys.argv)
+widget = QtWidgets.QStackedWidget()
+loginform = LoginApp()
+registrationform = RegApp()
+widget.addWidget(loginform)
+widget.addWidget(registrationform)
+widget.setCurrentIndex(1)
+widget.setFixedWidth(400)
+widget.setFixedHeight(500)
+widget.show()
+
+
