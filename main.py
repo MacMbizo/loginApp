@@ -9,3 +9,10 @@ class LoginApp(QDialog):
     def __init__(self):
         super(LoginApp, self).__init__()
         loadUi("login-form.ui", self)
+
+
+class RegApp(QDialog):
+    def __init__(self):
+        super(RegApp, self).__init__()
+        loadUi("register-form.ui", self)
+
