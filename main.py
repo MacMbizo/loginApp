@@ -55,7 +55,8 @@ class RegApp(QDialog):
             db.commit()
             QMessageBox.information(self, "Login form", "The user registered successfully. Login in now.")
 
-
+    def show_login(self):
+        widget.setCurrentIndex(0)
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
