@@ -51,12 +51,18 @@ class RegApp(QDialog):
         if result:
             QMessageBox.information(self, "Login form", "The user already registered. Try another username")
         else:
-            cursor.execute("insert into userlist values('" + un + "', '" + pw + "', '" + em + "', '" + ph + "', )")
+            cursor.execute("insert into userlist values('" + un + "', '" + pw + "', '" + em + "', '" + ph + "')")
             db.commit()
             QMessageBox.information(self, "Login form", "The user registered successfully. Login in now.")
+            self.tb3.setText("")
+            self.tb4.setText("")
+            self.tb5.setText("")
+            self.tb6.setText("")
+            widget.setCurrentIndex(0)
 
     def show_login(self):
         widget.setCurrentIndex(0)
+
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
