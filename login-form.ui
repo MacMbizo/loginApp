@@ -34,7 +34,7 @@ border-radius:20px;
 
 </string>
    </property>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="tb1">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -61,7 +61,7 @@ padding-bottom:3px;</string>
      <string>Username</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="tb2">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -91,7 +91,7 @@ padding-bottom:3px;</string>
      <string>Password</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button1">
+   <widget class="QPushButton" name="b1">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -108,14 +108,13 @@ padding-bottom:3px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#button1{
+     <string notr="true">QPushButton#b1{
 background-color:rgb(102, 102, 102);
 color:rgb(0, 0, 0);
 border-radius:5px;
-text-color:rgba(0, 0, 0);
 }
 
-QPushButton#button1:pressed{
+QPushButton#b1:pressed{
 background-color:rgb(230, 230, 230);
 }</string>
     </property>
@@ -171,7 +170,7 @@ background-color:rgb(230, 230, 230);
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="button2">
+   <widget class="QPushButton" name="b2">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -188,14 +187,13 @@ background-color:rgb(230, 230, 230);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#button2{
+     <string notr="true">QPushButton#b2{
 background-color:rgb(102, 102, 102);
 color:rgb(0, 0, 0);
 border-radius:5px;
-text-color:rgba(0, 0, 0);
 }
 
-QPushButton#button1:pressed{
+QPushButton#b2:pressed{
 background-color:rgb(230, 230, 230);
 }</string>
     </property>
